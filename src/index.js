@@ -4,10 +4,13 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import App from './App';
+import NavigationBar from './components/navigationbar'
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
+    <NavigationBar />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
