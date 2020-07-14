@@ -1,17 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Switch, Route, BrowserRouter, } from 'react-router-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import App from './App';
 import NavigationBar from './components/navigationbar'
+import Next from './components/next'
+import Next2 from './components/next2'
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
     <NavigationBar />
-    <App />
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <App />
+        </Route>
+        <Route path="/next">
+          <Next />
+        </Route>
+        <Route path="/next2">
+          <Next2 />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
